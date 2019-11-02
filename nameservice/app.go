@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"os"
 
+	"github.com/cosmos/sdk-tutorials/nameservice/x/coinswap"
+
 	abci "github.com/tendermint/tendermint/abci/types"
 	cmn "github.com/tendermint/tendermint/libs/common"
 	"github.com/tendermint/tendermint/libs/log"
@@ -50,6 +52,8 @@ var (
 		supply.AppModuleBasic{},
 
 		nameservice.AppModule{},
+		coinswap.AppModule{},
+		// coinswap.AppModule{},
 	)
 	// account permissions
 	maccPerms = map[string][]string{
